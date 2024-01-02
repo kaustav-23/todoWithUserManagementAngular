@@ -1,0 +1,27 @@
+
+<div id="login_body_bg">
+    <div id="login_banner">
+        <div id="login_banner_1">
+            <h2>Log in for registered User</h2>
+            <form id="logInForm_id" #logInForm="ngForm" (ngSubmit)="storeLogInData(logInForm)">
+                <input class="inp_st" type="text" name="emailid" placeholder="Enter User email address" ngModel id="inp_usr_id" required #inp_email = "ngModel" pattern="^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9-.]+$">
+                <input class="inp_st" type="password" name="password" placeholder="Enter Password" ngModel id="inp_pass_id" required #inp_pass = "ngModel" minlength="8">
+                <button  id="submit_btn_id" [disabled]="logInForm.invalid">Submit</button>
+            </form>
+        </div>
+        <div id="login_banner_2">
+          <div id="login_banner_2_mini">
+            <h2 class="alert_logIn" id="alert_input_email_id_logIn" *ngIf="inp_email.invalid && inp_email.touched" value="">Insert valid email address</h2>
+            <h2 class="alert_logIn" id="alert_input_password_id_logIn" *ngIf="inp_pass.invalid && inp_pass.touched" value="">Password should contain atleast 8 alphabets / digits / symbols</h2>
+            <h2 class="alert_logIn" id="alert_userNotFound_id_logIn" *ngIf="user == false" value="">User not found!!</h2>
+            <h2 class="alert_logIn" id="alert_pleaseWait_id_logIn" *ngIf="please_wait == true && user !== false" value="">Please wait!!</h2>
+            <h2 id="ask_signUp">Not registered? to Sign Up <span><a [routerLink] ="['/signUp']">CLICK HERE</a></span></h2>
+          </div>  
+            
+        </div>
+        
+    </div>
+</div>
+
+
+

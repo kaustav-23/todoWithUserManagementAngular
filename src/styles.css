@@ -1,0 +1,28 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+
+*{
+    margin: 0px;
+    padding: 0px;
+
+    font-family: 'Poppins', sans-serif;
+    
+}
+:root{
+
+    --col1:rgb(238, 174, 96);
+    --col2:rgb(240, 206, 164);
+    --col3:rgb(236, 233, 220);
+    --col4:rgb(231, 133, 13);
+    --col5:rgb(255,255,255);
+    --col6:rgb(248, 188, 116);
+    --col7:rgb(205, 28, 28);
+    --col8:rgb(12, 212, 12);
+    --col9:rgb(167, 162, 162);
+    --col10:green;
+    --col11:rgb(0, 145, 145);
+
+    
+}
+

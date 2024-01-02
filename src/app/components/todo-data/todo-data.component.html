@@ -1,0 +1,59 @@
+<div id="todo_body_bg">
+    <div id="todo_banner">
+        <div id="form_div">
+                <form #todo_inp ="ngForm" (ngSubmit)="saveTodo(todo_inp.value, todo_inp)">
+
+                    <input id="input_todo_id" name = "todo_ip" type="text" ngModel placeholder="Enter new todo item" required #todoIp="ngModel">
+                    <button id="submit_todo_button" [disabled]="todoIp.invalid">Submit</button>
+                </form>  
+                <div id="liveAlertPlaceholder">
+                    <h2 id="alert_todo" *ngIf="todoIp.invalid && todoIp.touched">Insert valid data</h2>
+                </div>
+                
+        </div>
+        <div id="tableandHeading">
+            <div id="todo_heading">
+                    <h2>Your todo list</h2>
+            </div> 
+            <table id="todo_table" class="table table-striped table-hover">
+                        <thead>
+                            <tr>
+                                <td>To Do</td>
+                                <td>Check</td>
+                                <td>Operation</td>
+                            </tr>
+                        </thead>
+                        <tbody *ngFor="let item of todoDataAll">
+                            <tr>
+                                <td>{{item.todo_ip}}</td>
+                                <td><input #chk_box id="todoCheck_id" name="todo_check" type="checkbox" (click)="updateChecked(item.id,chk_box.checked)" [checked] = "item.chkbox"></td>
+                                <td><button (click)="deleteTodo(item.id)">Delete</button></td>
+                            </tr>
+                        </tbody>
+        
+                        <!-- <ng-template #no_record>
+                            <tbody>
+                            
+                                <tr>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                </tr>
+                                
+                        </tbody>
+                        </ng-template> -->
+                        
+            </table>
+        </div>
+           
+          
+        
+        
+    </div>
+    
+</div>
+
+

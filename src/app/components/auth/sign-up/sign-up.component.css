@@ -1,0 +1,264 @@
+#signUp_body_bg{
+    background-color: rgb(238, 174, 96);
+    height : 90vh;
+    border-radius: 10px;
+    margin: 10px ;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#signUp_banner{
+    height:65%;
+    width:45%;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.426) 10px 10px 20px 3px;
+    display: grid ;
+    grid-template-areas: 'lgbn1 lgbn1 lgbn2';
+    
+}
+
+#signUp_banner_1{
+   
+   grid-area: lgbn1;
+   display: flex;
+   flex-flow: column wrap;
+   align-content: flex-start;
+   justify-content: center;
+   
+}
+
+#signUp_banner_1 h2{
+    font-size: 20px;
+    margin: 10px; 
+    text-align: center;    
+}
+
+#signUp_banner_2{
+    flex-flow: column wrap;
+    grid-area: lgbn2;
+    border-radius: 10px;
+    margin:10px;
+    background-color:rgb(240, 206, 164);
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    justify-content: center;
+    box-shadow: rgba(0, 0, 0, 0.556) 2px 2px 6px 1px inset;
+}
+
+#signUp_banner_2_mini{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    font-size: 10px;   
+    }
+
+#signUpForm_id{
+    
+    display:grid;
+    height: 200px;
+    width: 90%;
+    margin: 10px 10px 10px 15px;
+    grid-template-areas:'nm nm nm'
+                        'eml eml eml'
+                        'ps ps ps'
+                        'inpchk sm sm';    
+    
+    
+
+}
+
+#alerts_in_signup{
+   
+    display: grid;
+    grid-template-areas:  'anm anm anm'
+                'ae ae ae'
+                'aps aps aps'
+                'areg areg areg';
+    width:100%;
+}
+
+.inp_st{
+    border-radius: 10px;
+    border-color: transparent;
+    background-color: rgb(236, 233, 220);
+    padding: 1px 5px;
+    box-shadow: rgba(0, 0, 0, 0.555) 2px 2px 5px 0.1px;
+    margin: 7px 0px;
+    
+}
+#inp_name_id{
+    grid-area: nm;
+    height:40px;
+   
+}
+
+#inp_email_id{
+  grid-area: eml;
+  height:40px;
+  
+}
+
+#inp_password_id{
+    grid-area: ps;
+    height:40px;
+   
+  }
+
+
+
+#inp_type_id{
+    grid-area: inpchk;
+    margin-top: 13px;
+}
+
+#submit_btn_id{
+    grid-area: sm;
+    margin: 5px;
+    min-width:100px;
+    min-height: 25px;
+    border-radius: 10px;
+    border-color: transparent;
+    box-shadow: rgb(0,0,0,.3) 5px 5px 8px 1px , rgb(255, 255, 255) 2px 2px 8px 1px inset; 
+    font-weight: 600;
+    
+    
+}
+
+#submit_btn_id:disabled{
+    background-color: var(--col3);
+    color: var(--col9);
+}
+#submit_btn_id:enabled{
+    background-color: var(--col8);
+    color: var(--col5);
+}
+
+span a{
+    text-decoration: none;
+    color: green;
+}
+
+.alert_todo{
+    font-size: 18px;
+    margin-left: 10px;
+    background-color: var(--col7);
+    width: 45%;
+    color:white;
+    border-radius: 10px;
+    padding:10px;
+    box-shadow: rgba(0, 0, 0, 0.555) 2px 2px 5px 0.1px; ;
+  }
+
+
+
+  #alert_input_password_id{
+    grid-area: aps;
+  }
+  
+  #alert_input_name_id{
+    grid-area: anm;
+  }
+  
+  #alert_input_email_id{
+    grid-area: ae;
+  }
+
+  #alert_already_registered_signup_id{
+    grid-area:areg
+  }
+
+  #ask_signIn{
+    font-size: 17px;
+    padding:10px
+  }
+
+
+
+  .alert_signup{
+    font-size: 18px;
+    margin-left: 10px;
+    background-color: red;
+    width: 80%;
+    color:white;
+    border-radius: 10px;
+    padding:10px;
+    box-shadow: rgba(0, 0, 0, 0.555) 2px 2px 5px 0.1px; ;
+  }
+
+  #alert_success_signup_id{
+    background-color: var(--col8);
+  }
+
+
+
+/*------------------ media q at maxw 895 px------------- */
+  @media screen and (max-width:895px){
+    #signUp_banner{
+      width: 57%;
+    }
+  }
+
+ 
+
+  /*------------------ media q at maxw 712 px------------- */
+  @media screen and (max-width:712px){
+    
+
+    #signUp_banner{
+      height:min-content;
+      width:245px;
+      background-color: white;
+      box-shadow: rgba(0, 0, 0, 0.426) 10px 10px 20px 3px;
+      display: grid ;
+      grid-template-areas: 'lgbn1 lgbn' 
+                           'lgbn2 lgbn2';
+
+  }
+  .alert_signup{
+    font-size: 12px;
+    margin-left: 10px;
+    background-color: red;
+    width: 80%;
+    color:white;
+    border-radius: 10px;
+    padding:10px;
+    box-shadow: rgba(0, 0, 0, 0.555) 2px 2px 5px 0.1px; ;
+  }
+  #ask_signIn{
+    font-size: 17px;
+    padding:10px
+  }
+
+}
+
+  
+  
+  /*------------------ media q at maxw 566 px------------- */
+  @media screen and (max-width:566px){
+    #signUp_banner{
+      height:min-content;
+      width:245px;
+      background-color: white;
+      box-shadow: rgba(0, 0, 0, 0.426) 10px 10px 20px 3px;
+      display: grid ;
+      grid-template-areas: 'lgbn1 lgbn' 
+                           'lgbn2 lgbn2';
+
+  }
+  #signUp_banner_2_mini{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    font-size: 10px;
+
+    }
+
+
+  }
+
+ 
+  
+
+

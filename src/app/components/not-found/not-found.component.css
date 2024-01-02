@@ -1,0 +1,80 @@
+#login_body_bg{
+    background-color: rgb(238, 174, 96);
+    height : 90vh;
+    border-radius: 10px;
+    margin: 10px ;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#login_banner{
+    height:50%;
+    width:45%;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.426) 10px 10px 20px 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    
+}
+
+#login_banner_1{
+   
+   grid-area: lgbn1;
+   display: flex;
+   flex-flow: column wrap;
+   justify-content: center;
+   align-items: center;
+}
+
+
+
+#alert_icon_id{
+    height:80px;
+    width: 80px;
+    margin:30px;
+}
+
+.text_404{
+    color: var(--black) ;
+    font-size:30px;
+}
+#id_404{
+    color: var(--col7);
+    font-size: 40px;
+}
+
+/*------------------ media q at maxw 692 px------------- */
+
+@media screen and (max-width:692px){
+    #login_banner{
+        height:50%;
+        width:55%;
+        background-color: white;
+        box-shadow: rgba(0, 0, 0, 0.426) 10px 10px 20px 3px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        
+    }
+    
+}
+
+/*------------------ media q at maxw 447 px------------- */
+
+@media screen and (max-width:447px){
+  
+    .text_404{
+        color: var(--black) ;
+        font-size:20px;
+    }
+    #id_404{
+        color: var(--col7);
+        font-size: 30px;
+    }
+    
+}
+

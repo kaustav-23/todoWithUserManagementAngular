@@ -1,0 +1,35 @@
+<div id="signUp_body_bg">
+  <div id="signUp_banner">
+    <div id="signUp_banner_1">
+      <h2>Sign up</h2>
+      <form id="signUpForm_id" #signUpForm="ngForm" (ngSubmit)="storeData(signUpForm.value , signUpForm)">
+        <input type="text" id="inp_name_id" class="inp_st" name="name" placeholder="Enter your name" ngModel required #input_name="ngModel" pattern="^[a-zA-Z ]+$">
+        <input type="text" id="inp_email_id" class="inp_st" name="email_id" placeholder="Enter yout email id" ngModel required #input_email="ngModel" pattern="^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9-.]+$">
+        <input type="password" id="inp_password_id" class="inp_st" name="password" placeholder="Enter your password"
+          ngModel required #input_password="ngModel" minlength="8">
+          <label id="label_inp_type_id" >Admin?
+            <input type="checkbox" id="inp_type_id" class="inp_checkBox" name="adminCheck" checked="false" ngModel>
+          </label> 
+        <button id="submit_btn_id" [disabled]="signUpForm.invalid">submit</button>
+
+      </form>
+
+    </div>
+    <div id="signUp_banner_2">
+      <div id="alerts_in_signup">
+        <h2 class="alert_signup" id="alert_input_name_id" *ngIf="input_name.invalid && input_name.touched" value="">Insert valid name</h2>
+        <h2 class="alert_signup" id="alert_input_email_id" *ngIf="input_email.invalid && input_email.touched" value="">Insert valid email address</h2>
+        <h2 class="alert_signup" id="alert_input_password_id" *ngIf="input_password.invalid && input_password.touched" value="">Password should contain atleast 8 alphabets / digits / symbols</h2>
+
+        <h2 class="alert_signup" id="alert_success_signup_id" *ngIf="showSuccessMessage">Successfully submitted data</h2>
+        <h2 class="alert_signup" id="alert_already_registered_signup_id" *ngIf="showAlreadyRegisteredMessage">Already registered</h2>
+
+      </div>
+      <div id="signUp_banner_2_mini">
+        <h2 id="ask_signIn">Already registered? to Sign In <span><a [routerLink] ="['/login']">CLICK HERE</a></span></h2>
+      </div>
+
+    </div>
+
+  </div>
+</div>
