@@ -1,5 +1,5 @@
 #login_body_bg{
-    background-color: rgb(238, 174, 96);
+    background-color: var(--col1);
     height : 90vh;
     border-radius: 10px;
     margin: 10px ;
@@ -40,7 +40,7 @@
     grid-area: lgbn2;
     border-radius: 10px;
     margin:10px;
-    background-color:rgb(240, 206, 164);
+    background-color:var(--col2);
     display: flex;
     align-items: center;
     padding: 10px;
@@ -75,7 +75,7 @@
 .inp_st{
     border-radius: 10px;
     border-color: transparent;
-    background-color: rgb(236, 233, 220);
+    background-color: var(--col3);
     padding: 1px 5px;
     box-shadow: rgba(0, 0, 0, 0.555) 2px 2px 5px 0.1px;
     
@@ -154,124 +154,6 @@ span a{
         
     }
     
-    #login_banner_1{
-       
-       grid-area: lgbn1;
-       display: flex;
-       flex-flow: column wrap;
-       justify-content: center;
-       align-items: center;
-    }
-    
-    #login_banner_1 h2{
-        font-size: 20px;
-        margin: 10px; 
-    }
-    
-    #login_banner_2{
-        grid-area: lgbn2;
-        border-radius: 10px;
-        margin:10px;
-        background-color:rgb(240, 206, 164);
-        display: flex;
-        align-items: center;
-        padding: 10px;
-        justify-content: center;
-        box-shadow: rgba(0, 0, 0, 0.556) 2px 2px 6px 1px inset;
-    }
-    
-    #login_banner_2_mini{
-        display: flex;
-        flex-flow: row wrap;
-        text-align: center;
-        align-content: center;
-        justify-content: center;
-        font-size: 10px;
-        
-        
-    }
-    
-    #logInForm_id{
-       
-        display:grid;
-        height: 150px;
-        width: 90%;
-        margin: 10px;
-        grid-template-areas:'un un un'
-                            'ps ps ps'
-                            '. sm sm';             
-        
-    
-    }
-    
-    .inp_st{
-        border-radius: 10px;
-        border-color: transparent;
-        background-color: rgb(236, 233, 220);
-        padding: 1px 5px;
-        box-shadow: rgba(0, 0, 0, 0.555) 2px 2px 5px 0.1px;
-        
-    }
-    #inp_usr_id{
-        grid-area: un;
-        height:40px;
-        margin: 5px;
-        
-    }
-    
-    #inp_pass_id{
-      grid-area: ps;
-      height:40px;
-      margin:5px;
-      
-    }
-    
-    
-    
-    #submit_btn_id{
-        grid-area: sm;
-        margin: 5px;
-        min-width:100px;
-        min-height: 25px;
-        border-radius: 10px;
-        border-color: transparent;
-        box-shadow: rgb(0,0,0,.3) 5px 5px 8px 1px , rgb(255, 255, 255) 2px 2px 8px 1px inset; 
-        font-weight: 600;
-        
-        
-    }
-    
-    #submit_btn_id:disabled{
-        background-color: var(--col3);
-        color: var(--col9);
-    }
-    #submit_btn_id:enabled{
-        background-color: var(--col8);
-        color: var(--col5);
-    }
-    
-    
-    span a{
-        text-decoration: none;
-        color: var(--col10);
-    }
-    
-    .alert_logIn{
-        font-size: 18px;
-        margin-left: 10px;
-        background-color: red;
-        width: 80%;
-        color:white;
-        border-radius: 10px;
-        padding:10px;
-        box-shadow: rgba(0, 0, 0, 0.555) 2px 2px 5px 0.1px; ;
-      }
-    
-      #ask_signUp{
-        font-size: 17px;
-        padding:10px
-      }
-    
   }
 
   /*------------------ media q at maxw 891 px------------- */
@@ -286,124 +168,8 @@ span a{
         grid-template-areas: 'lgbn1 lgbn1 lgbn2';
         
     }
+  
     
-    #login_banner_1{
-       
-       grid-area: lgbn1;
-       display: flex;
-       flex-flow: column wrap;
-       justify-content: center;
-       align-items: center;
-    }
-    
-    #login_banner_1 h2{
-        font-size: 20px;
-        margin: 10px; 
-    }
-    
-    #login_banner_2{
-        grid-area: lgbn2;
-        border-radius: 10px;
-        margin:10px;
-        background-color:rgb(240, 206, 164);
-        display: flex;
-        align-items: center;
-        padding: 10px;
-        justify-content: center;
-        box-shadow: rgba(0, 0, 0, 0.556) 2px 2px 6px 1px inset;
-    }
-    
-    #login_banner_2_mini{
-        display: flex;
-        flex-flow: row wrap;
-        text-align: center;
-        align-content: center;
-        justify-content: center;
-        font-size: 10px;
-        
-        
-    }
-    
-    #logInForm_id{
-       
-        display:grid;
-        height: 150px;
-        width: 90%;
-        margin: 10px;
-        grid-template-areas:'un un un'
-                            'ps ps ps'
-                            '. sm sm';             
-        
-    
-    }
-    
-    .inp_st{
-        border-radius: 10px;
-        border-color: transparent;
-        background-color: rgb(236, 233, 220);
-        padding: 1px 5px;
-        box-shadow: rgba(0, 0, 0, 0.555) 2px 2px 5px 0.1px;
-        
-    }
-    #inp_usr_id{
-        grid-area: un;
-        height:40px;
-        margin: 5px;
-        
-    }
-    
-    #inp_pass_id{
-      grid-area: ps;
-      height:40px;
-      margin:5px;
-      
-    }
-    
-    
-    
-    #submit_btn_id{
-        grid-area: sm;
-        margin: 5px;
-        min-width:100px;
-        min-height: 25px;
-        border-radius: 10px;
-        border-color: transparent;
-        box-shadow: rgb(0,0,0,.3) 5px 5px 8px 1px , rgb(255, 255, 255) 2px 2px 8px 1px inset; 
-        font-weight: 600;
-        
-        
-    }
-    
-    #submit_btn_id:disabled{
-        background-color: var(--col3);
-        color: var(--col9);
-    }
-    #submit_btn_id:enabled{
-        background-color: var(--col8);
-        color: var(--col5);
-    }
-    
-    
-    span a{
-        text-decoration: none;
-        color: var(--col10);
-    }
-    
-    .alert_logIn{
-        font-size: 18px;
-        margin-left: 10px;
-        background-color: red;
-        width: 80%;
-        color:white;
-        border-radius: 10px;
-        padding:10px;
-        box-shadow: rgba(0, 0, 0, 0.555) 2px 2px 5px 0.1px; ;
-      }
-    
-      #ask_signUp{
-        font-size: 17px;
-        padding:10px
-      }
     
   }
 
@@ -421,122 +187,6 @@ span a{
         
     }
     
-    #login_banner_1{
-       
-       grid-area: lgbn1;
-       display: flex;
-       flex-flow: column wrap;
-       justify-content: center;
-       align-items: center;
-    }
     
-    #login_banner_1 h2{
-        font-size: 20px;
-        margin: 10px; 
-    }
-    
-    #login_banner_2{
-        grid-area: lgbn2;
-        border-radius: 10px;
-        margin:10px;
-        background-color:rgb(240, 206, 164);
-        display: flex;
-        align-items: center;
-        padding: 10px;
-        justify-content: center;
-        box-shadow: rgba(0, 0, 0, 0.556) 2px 2px 6px 1px inset;
-    }
-    
-    #login_banner_2_mini{
-        display: flex;
-        flex-flow: row wrap;
-        text-align: center;
-        align-content: center;
-        justify-content: center;
-        font-size: 10px;
-        
-        
-    }
-    
-    #logInForm_id{
-       
-        display:grid;
-        height: 150px;
-        width: 90%;
-        margin: 10px;
-        grid-template-areas:'un un un'
-                            'ps ps ps'
-                            '. sm sm';             
-        
-    
-    }
-    
-    .inp_st{
-        border-radius: 10px;
-        border-color: transparent;
-        background-color: rgb(236, 233, 220);
-        padding: 1px 5px;
-        box-shadow: rgba(0, 0, 0, 0.555) 2px 2px 5px 0.1px;
-        
-    }
-    #inp_usr_id{
-        grid-area: un;
-        height:40px;
-        margin: 5px;
-        
-    }
-    
-    #inp_pass_id{
-      grid-area: ps;
-      height:40px;
-      margin:5px;
-      
-    }
-    
-    
-    
-    #submit_btn_id{
-        grid-area: sm;
-        margin: 5px;
-        min-width:100px;
-        min-height: 25px;
-        border-radius: 10px;
-        border-color: transparent;
-        box-shadow: rgb(0,0,0,.3) 5px 5px 8px 1px , rgb(255, 255, 255) 2px 2px 8px 1px inset; 
-        font-weight: 600;
-        
-        
-    }
-    
-    #submit_btn_id:disabled{
-        background-color: var(--col3);
-        color: var(--col9);
-    }
-    #submit_btn_id:enabled{
-        background-color: var(--col8);
-        color: var(--col5);
-    }
-    
-    
-    span a{
-        text-decoration: none;
-        color: var(--col10);
-    }
-    
-    .alert_logIn{
-        font-size: 18px;
-        margin-left: 10px;
-        background-color: red;
-        width: 80%;
-        color:white;
-        border-radius: 10px;
-        padding:10px;
-        box-shadow: rgba(0, 0, 0, 0.555) 2px 2px 5px 0.1px; ;
-      }
-    
-      #ask_signUp{
-        font-size: 17px;
-        padding:10px
-      }
     
   }
