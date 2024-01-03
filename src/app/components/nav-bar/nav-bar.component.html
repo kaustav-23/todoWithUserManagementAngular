@@ -6,10 +6,10 @@
     <h1 id="Welcome" *ngIf="!checkLoggedIn()" class="greet_user"><marquee>Todo App</marquee></h1>
     </div>
       <div id="div_2">
-        <button (click)="toLogin()">
+        <button (click)="toLogin()" *ngIf="!checkLoggedIn()">
           Login
         </button>
-        <button (click)="toSignUp()" >
+        <button (click)="toSignUp()" *ngIf="!checkLoggedIn()">
           SignUp
         </button>
         <button *ngIf="checkLoggedIn()" id="btn_logOut"(click)="toLogOut()">

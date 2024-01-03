@@ -6,17 +6,20 @@ import { TodoDataComponent } from './components/todo-data/todo-data.component';
 import { UserListComponent } from './components/user-list/user-list.component';
 import { authGuardGuard } from './guards/auth-guard.guard';
 import { NotFoundComponent } from './components/not-found/not-found.component';
+import { loginAuthGuardGuard } from './guards/login-auth-guard.guard';
 
 const routes: Routes = [
   
     {
       path: 'login',
       component:LoginComponent,
+      canActivate:[loginAuthGuardGuard]
       
     }
     ,{
       path:'signUp',
-      component:SignUpComponent
+      component:SignUpComponent,
+      canActivate:[loginAuthGuardGuard]
     }
     ,{
       path:'todo-data/:userId',
@@ -30,8 +33,8 @@ const routes: Routes = [
       canActivate:[authGuardGuard]
     },
     {
-      path:'',
-      component:LoginComponent
+       path:'',
+       component:SignUpComponent
     }
     ,{
       path:'**',
