@@ -2,8 +2,8 @@
   <div class="div_main">
     <div id="div_1">
       <img id="icon" src="../../../assets/toDoListIcon.png" alt="Todo webapp logo">
-    <h1 *ngIf="checkLoggedIn()" class="greet_user">Hello!! {{userName_}}</h1>
-    <h1 id="Welcome" *ngIf="!checkLoggedIn()" class="greet_user"><marquee>Todo App</marquee></h1>
+    <h1 *ngIf="checkLoggedIn()" class="greet_user"><marquee scrollamount = "2">Hello!! {{userName_}}</marquee></h1>
+    <h1 id="Welcome" *ngIf="!checkLoggedIn()" class="greet_user"><marquee scrollamount = "2">Your Todo App</marquee></h1>
     </div>
       <div id="div_2">
         <button (click)="toLogin()" *ngIf="!checkLoggedIn()">
