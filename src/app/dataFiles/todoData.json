@@ -1,40 +1,5 @@
 {
   "userToDo": [
-    {
-      "todo_ip": "todo 1 for kc",
-      "userId": "2",
-      "chkbox": true,
-      "id": 1
-    },
-    {
-      "todo_ip": "todo 1 for test",
-      "userId": "3",
-      "chkbox": false,
-      "id": 2
-    },
-    {
-      "todo_ip": "go to shop",
-      "userId": "4",
-      "chkbox": true,
-      "id": 3
-    },
-    {
-      "todo_ip": "buy groce",
-      "userId": "4",
-      "chkbox": true,
-      "id": 4
-    },
-    {
-      "todo_ip": "take veg",
-      "userId": "5",
-      "chkbox": true,
-      "id": 5
-    },
-    {
-      "todo_ip": "cook veg",
-      "userId": "5",
-      "chkbox": false,
-      "id": 6
-    }
+ 
   ]
 }

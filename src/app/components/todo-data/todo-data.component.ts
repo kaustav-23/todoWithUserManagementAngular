@@ -12,7 +12,7 @@ import { ActivatedRoute } from '@angular/router';
   styleUrl: './todo-data.component.css'
 })
 export class TodoDataComponent implements OnInit {
-  user_id=0;
+  user_id=-1;
   todoDataAll :any;
   data = {};
   constructor(private todoData:TodoDataUpdateService, private activated_route:ActivatedRoute ){};
@@ -26,7 +26,7 @@ export class TodoDataComponent implements OnInit {
   loadData(){
     this.todoData.todoGet(this.user_id).subscribe((data)=>{
       this.todoDataAll = data;
-      console.log("ngOnIt called");
+      console.log("todo datas:", this.todoDataAll);
       
     });
   }

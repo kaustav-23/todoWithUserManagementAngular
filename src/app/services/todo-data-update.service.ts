@@ -22,6 +22,10 @@ export class TodoDataUpdateService {
   todoDelete(id:any){
     return this.http.delete(`${this.url_todoData}/${id}`);
   }
+//-----------------------------------------------------------
+  
+  //-----------------------------------------------------------
+
 
   todoUpdate(id:any,data:any){
     return this.http.patch(`${this.url_todoData}/${id}`,data);

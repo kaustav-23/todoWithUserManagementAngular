@@ -22,26 +22,34 @@ export class LoginComponent implements OnInit {
       this.please_wait=true;
       this.userDataUpdate.userLogInGet().subscribe((res)=>{
         console.log(res);
-        const user_x = res.find((a:any)=>{
-             this.user = a.email_id === loginForm.value.emailid && a.password === loginForm.value.password;
-            
-           if(this.user){
-            this.please_wait=false;
-            let user_id:Number = a.id;
-            loginForm.reset();
+        if(res.length == 0){
+          this.user = false;
+        }
+        else{
+          const user_x = res.find((a:any)=>{
+            this.user = a.email_id === loginForm.value.emailid && a.password === loginForm.value.password;
+           
+          if(this.user){
+           this.please_wait=false;
+           let user_id:Number = a.id;
+           loginForm.reset();
 
-            localStorage.setItem('token',Math.random().toString());
-            localStorage.setItem('uname',a.name.toString());
-            
-            if(a.adminCheck === true){
-              this._route.navigate(['user-list']);
-            }
-            else{
-              this._route.navigate([`todo-data/${user_id}`]);
-            }
+           localStorage.setItem('token',Math.random().toString());
+           localStorage.setItem('uname',a.name.toString());
+           
+           if(a.adminCheck === true){
+             this._route.navigate([`user-list/${user_id}`]);
+           }
+           else{
 
-            }
-        });
+             this._route.navigate([`todo-data/${user_id}`]);
+             console.log("moving to todo data for user id:", user_id);
+           }
+
+           }
+       });
+        }
+        
         
       });
     

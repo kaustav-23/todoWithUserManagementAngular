@@ -1,25 +1,5 @@
 {
   "obj": [
-    {
-      "name": "Kaustav Chakraborty",
-      "email_id": "abc@abc.com",
-      "password": "12345678",
-      "adminCheck": true,
-      "id": 1
-    },
-    {
-      "name": "Kamalendu Chakraborty",
-      "email_id": "kc@gmail.com",
-      "password": "12345678",
-      "adminCheck": null,
-      "id": 2
-    },
-    {
-      "name": "Kamalendu Chakraborty",
-      "email_id": "kchakraborty@gmail.com",
-      "password": "12345678",
-      "adminCheck": "",
-      "id": 4
-    }
+    
   ]
 }
